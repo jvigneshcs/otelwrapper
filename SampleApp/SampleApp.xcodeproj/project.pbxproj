@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA262FDD296C3BFD00687C1B /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = FA262FDC296C3BFD00687C1B /* GRPC */; };
 		FA73B6732964941400A07F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73B6722964941400A07F6A /* AppDelegate.swift */; };
 		FA73B6772964941400A07F6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73B6762964941400A07F6A /* ViewController.swift */; };
 		FA73B67A2964941400A07F6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA73B6782964941400A07F6A /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA262FDD296C3BFD00687C1B /* GRPC in Frameworks */,
 				FA73B6A22964A09400A07F6A /* OtelWrapper.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +110,9 @@
 			dependencies = (
 			);
 			name = SampleApp;
+			packageProductDependencies = (
+				FA262FDC296C3BFD00687C1B /* GRPC */,
+			);
 			productName = SampleApp;
 			productReference = FA73B66F2964941400A07F6A /* SampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +141,9 @@
 				Base,
 			);
 			mainGroup = FA73B6662964941400A07F6A;
+			packageReferences = (
+				FA262FDB296C3BFD00687C1B /* XCRemoteSwiftPackageReference "grpc-swift" */,
+			);
 			productRefGroup = FA73B6702964941400A07F6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -382,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA262FDB296C3BFD00687C1B /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA262FDC296C3BFD00687C1B /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA262FDB296C3BFD00687C1B /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA73B6672964941400A07F6A /* Project object */;
 }

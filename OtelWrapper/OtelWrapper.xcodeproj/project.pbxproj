@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		FA73B660296493B200A07F6A /* OtelWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = FA73B65F296493B200A07F6A /* OtelWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA73B6872964943800A07F6A /* WrapperAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73B6862964943800A07F6A /* WrapperAPI.swift */; };
-		FA73B68A2964949600A07F6A /* OpenTelemetryApi in Frameworks */ = {isa = PBXBuildFile; productRef = FA73B6892964949600A07F6A /* OpenTelemetryApi */; };
-		FA73B68C2964949600A07F6A /* OpenTelemetryProtocolExporter in Frameworks */ = {isa = PBXBuildFile; productRef = FA73B68B2964949600A07F6A /* OpenTelemetryProtocolExporter */; };
-		FA73B68E2964949600A07F6A /* OpenTelemetrySdk in Frameworks */ = {isa = PBXBuildFile; productRef = FA73B68D2964949600A07F6A /* OpenTelemetrySdk */; };
 		FA73B691296494B000A07F6A /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = FA73B690296494B000A07F6A /* GRPC */; };
 		FA73B694296494C900A07F6A /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = FA73B693296494C900A07F6A /* NIO */; };
 		FA73B697296494DD00A07F6A /* NIOHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = FA73B696296494DD00A07F6A /* NIOHTTP2 */; };
@@ -30,11 +27,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA73B691296494B000A07F6A /* GRPC in Frameworks */,
-				FA73B68E2964949600A07F6A /* OpenTelemetrySdk in Frameworks */,
 				FA73B69C2964982000A07F6A /* NIOPosix in Frameworks */,
 				FA73B697296494DD00A07F6A /* NIOHTTP2 in Frameworks */,
-				FA73B68A2964949600A07F6A /* OpenTelemetryApi in Frameworks */,
-				FA73B68C2964949600A07F6A /* OpenTelemetryProtocolExporter in Frameworks */,
 				FA73B694296494C900A07F6A /* NIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,9 +98,6 @@
 			);
 			name = OtelWrapper;
 			packageProductDependencies = (
-				FA73B6892964949600A07F6A /* OpenTelemetryApi */,
-				FA73B68B2964949600A07F6A /* OpenTelemetryProtocolExporter */,
-				FA73B68D2964949600A07F6A /* OpenTelemetrySdk */,
 				FA73B690296494B000A07F6A /* GRPC */,
 				FA73B693296494C900A07F6A /* NIO */,
 				FA73B696296494DD00A07F6A /* NIOHTTP2 */,
@@ -141,7 +132,6 @@
 			);
 			mainGroup = FA73B652296493B200A07F6A;
 			packageReferences = (
-				FA73B6882964949600A07F6A /* XCRemoteSwiftPackageReference "opentelemetry-swift" */,
 				FA73B68F296494B000A07F6A /* XCRemoteSwiftPackageReference "grpc-swift" */,
 				FA73B692296494C900A07F6A /* XCRemoteSwiftPackageReference "swift-nio" */,
 				FA73B695296494DD00A07F6A /* XCRemoteSwiftPackageReference "swift-nio-http2" */,
@@ -389,14 +379,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA73B6882964949600A07F6A /* XCRemoteSwiftPackageReference "opentelemetry-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/open-telemetry/opentelemetry-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		FA73B68F296494B000A07F6A /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/grpc/grpc-swift";
@@ -424,21 +406,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA73B6892964949600A07F6A /* OpenTelemetryApi */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FA73B6882964949600A07F6A /* XCRemoteSwiftPackageReference "opentelemetry-swift" */;
-			productName = OpenTelemetryApi;
-		};
-		FA73B68B2964949600A07F6A /* OpenTelemetryProtocolExporter */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FA73B6882964949600A07F6A /* XCRemoteSwiftPackageReference "opentelemetry-swift" */;
-			productName = OpenTelemetryProtocolExporter;
-		};
-		FA73B68D2964949600A07F6A /* OpenTelemetrySdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FA73B6882964949600A07F6A /* XCRemoteSwiftPackageReference "opentelemetry-swift" */;
-			productName = OpenTelemetrySdk;
-		};
 		FA73B690296494B000A07F6A /* GRPC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA73B68F296494B000A07F6A /* XCRemoteSwiftPackageReference "grpc-swift" */;

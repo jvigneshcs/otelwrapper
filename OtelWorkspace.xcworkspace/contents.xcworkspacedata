@@ -5,6 +5,9 @@
       location = "group:generateXCFramework.sh">
    </FileRef>
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "group:SampleApp/SampleApp.xcodeproj">
    </FileRef>
    <FileRef
